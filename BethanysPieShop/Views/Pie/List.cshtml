@@ -1,0 +1,17 @@
+﻿@model IEnumerable<BethanysPieShop.Models.Pie>
+
+@{
+    ViewData["Title"] = "Bethany's Pie Shop";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var pie in Model)
+{
+<div>
+    <h2>@pie.Name</h2>
+    <h3>@pie.Price.ToString("c")</h3>
+    <h4>@pie.Category.CategoryName</h4>
+</div>
+}
+
